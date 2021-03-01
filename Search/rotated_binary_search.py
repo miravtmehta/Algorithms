@@ -1,4 +1,4 @@
-def binary_search(data, target):
+def rotated_binary_search(data, target):
     left = 0
     right = len(data) - 1
     while left <= right:
@@ -16,4 +16,4 @@ def binary_search(data, target):
 
 data = [4, 5, 6, 7, 0, 1, 2]
 target = 6
-print(binary_search(data, target))
+print(rotated_binary_search(data, target))
