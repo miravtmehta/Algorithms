@@ -1,22 +1,20 @@
-def rotated_binary_search(data, target):
+def rotated_binary_search(nums, target):
     left = 0
-    right = len(data) - 1
+    right = len(nums) - 1
     while left <= right:
         middle = (left + right) // 2
-        if data[middle] == target:
+        if nums[middle] == target:
             return middle
-
-        if data[middle] > target:
-            if data[middle + 1] <= target <= data[right]:
-                left = left + 1
+        if nums[right] >= nums[middle]:
+            if nums[middle] <= target <= nums[right]:
+                left = middle + 1
             else:
-                right = right - 1
-        if data[middle] < target:
-            if data[left] <= target <= data[right - 1]:
-                right = right + 1
+                right = middle - 1
+        if nums[middle] >= nums[left]:
+            if nums[left] <= target <= nums[middle]:
+                right = middle - 1
             else:
                 left = left + 1
-
     return -1
 
 
