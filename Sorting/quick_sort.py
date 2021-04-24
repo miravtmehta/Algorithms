@@ -32,4 +32,10 @@ print(f'sorted_array', s)
 # Quick Reads :
 # Use randomised quick sort than quick sort to avoid worst case
 # https://www.baeldung.com/cs/quicksort-time-complexity-worst-case
+"""
+Worst case : 
+(a)when sorted array choose left most elements : unbalance arrays 
+1st half 1 elements and 2nd half with rest
+(b)when sorted array and all elements are same
+"""
 # https://www.youtube.com/watch?v=RFyLsF9y83c&t=205s
